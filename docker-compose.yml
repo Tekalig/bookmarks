@@ -1,0 +1,25 @@
+services:
+  dev-db:
+    image: postgres:16-alpine
+    ports:
+      - 5434:5432
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=0753
+      - POSTGRES_DB=nestdb
+    networks:
+      - freecodecamp
+
+  test-db:
+    image: postgres:16-alpine
+    ports:
+      - 5435:5432
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=0753
+      - POSTGRES_DB=nestdb
+    networks:
+      - freecodecamp
+
+networks:
+  freecodecamp:
