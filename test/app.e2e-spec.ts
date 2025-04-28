@@ -325,8 +325,8 @@ describe('App e2e', () => {
           .withHeaders({ Authorization: 'Bearer $S{userAt}' })
           .withBody(editPayload)
           .expectStatus(200)
-          .expectBodyContains(editPayload.title)
-          .expectBodyContains(editPayload.description);
+          .expectBodyContains(editPayload.title as string)
+          .expectBodyContains(editPayload.description as string);
       });
     });
 
