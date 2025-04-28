@@ -69,7 +69,7 @@ describe('App e2e', () => {
           .expectBodyContains('Credentials taken');
       });
 
-      it('should throw an error if onbody is send', () => {
+      it('should throw an error if no body is sent', () => {
         // Test invalid email error here
         return pactum
           .spec()
