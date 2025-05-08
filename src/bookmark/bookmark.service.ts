@@ -44,7 +44,7 @@ export class BookmarkService {
       },
     });
 
-    if (!bookmark || bookmark?.userId !== userId)
+    if (!bookmark || bookmark.userId !== userId)
       throw new ForbiddenException('Access to resource is denied');
 
     return this.db.bookmark.update({
